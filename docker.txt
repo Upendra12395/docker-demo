@@ -1,0 +1,52 @@
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
+vm ware problems===
+1. Each vm needs a full-blown OS
+2. Slow to start
+3. Resource intensive
+
+containers ===
+1. allow running multiple apps in isolation
+2. are lightweight
+3. Use OS of the host
+4. Start Quickly
+5. Need less hardware resources.
+
+commands
+
+docker version =====>to check version
+docker images ===> to check images
+docker rmi image_id ==========> to delete image
+docker ps -a ==========> to check all containers
+docker rm container_id ========> to delete container
+docker rm $(docker ps -s -q -f status-existed);  ====> to delete all containers
+docker container crune =====> to delete everything stopped container
+
+Simple Dockerised file
+Create a folder => dockerDemo
+
+craete a file => app.js
+
+create a file => Dockerfile
+write the following code 
+
+{
+FROM node:12(ur choice)
+COPY . /app
+CMD node /app/app.js
+}
+
+{
+FROM node:12
+COPY . /app
+WORKDIR /app
+CMD node app.js
+}
+
+go to the terminal
+
+Build Image => docker build -t my-app .(If in present directory) else (path of the app.js)
+
+Run the image => docker run my-app(image name)
+
+to delete image first delete the running container the delete the image
+
