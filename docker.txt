@@ -19,7 +19,11 @@ docker rmi image_id ==========> to delete image
 docker ps -a ==========> to check all containers
 docker rm container_id ========> to delete container
 docker rm $(docker ps -s -q -f status-existed);  ====> to delete all containers
-docker container crune =====> to delete everything stopped container
+docker container prune =====> to delete everything stopped container
+docker run it container_name sh ==> to go inside the container.
+exit ====> To exit from container
+
+
 
 Simple Dockerised file
 Create a folder => dockerDemo
