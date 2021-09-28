@@ -52,5 +52,5 @@ Build Image => docker build -t my-app .(If in present directory) else (path of t
 
 Run the image => docker run my-app(image name)
 
-to delete image first delete the running container the delete the image
+to delete image first delete the running container then delete the image
 
